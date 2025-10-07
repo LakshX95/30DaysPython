@@ -14,3 +14,9 @@ fruits = ("apple", "banana", "orange", "grape", "mango")
 vegitables = ("carrot", "potato", "tomato", "cabbage", "onion")
 
 food_stuff_tp = fruits + vegitables + animals_foods
+
+
+nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
+
+print("Is estonia a nordic country?", "Estonia" in nordic_countries)
+print("Is Iceland a nordic country?", "Iceland" in nordic_countries)
