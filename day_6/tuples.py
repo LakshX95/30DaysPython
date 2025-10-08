@@ -20,3 +20,4 @@ nordic_countries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
 
 print("Is estonia a nordic country?", "Estonia" in nordic_countries)
 print("Is Iceland a nordic country?", "Iceland" in nordic_countries)
+
