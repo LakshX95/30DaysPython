@@ -148,7 +148,7 @@ numbers = (0, 1, 2, 3, 4, 5, 6)
 
 
 
-# from countries import countries
+from countries import countries
 
 # land_list = []
 
@@ -165,3 +165,13 @@ numbers = (0, 1, 2, 3, 4, 5, 6)
 # for i in range(len(fruits)-1, -1, -1):
 #     reversed_fruits.append(fruits[i])
 # print(reversed_fruits)
+
+import countries_data
+
+languages = set()  # use a set to avoid duplicates
+
+for country in countries_data.countries_data:
+    for lang in country['languages']:
+        languages.add(lang)
+
+print("Total number of languages:", len(languages))
