@@ -91,9 +91,41 @@
     
 # print(check_season("january"))
 
-def calculate_slope(x1, x2, y1, y2):
-    if x1 == x2:
-        print("slope is undifined!")
-    slope = y2 - y1/(x2 - x1)
-    return slope
-print(calculate_slope(5, 3, 6, 4))
+# def calculate_slope(x1, x2, y1, y2):
+#     if x1 == x2:
+#         print("slope is undifined!") 
+#     slope = y2 - y1/(x2 - x1)
+#     return slope
+# print(calculate_slope(5, 3, 6, 4))
+
+# import countries_data
+
+# def most_spoken_languages(data, n = 10):
+#     language_count = {}
+
+#     for i in countries_data:
+#         for language in i["languages"]:
+#             if language in language_count:
+#                 language_count[language] += 1
+#             else:
+#                 language_count[language] = 1
+from countries_data import countries_data
+
+def most_spoken_languages(counties_data, n=10):
+    language_count = {}
+
+    # Loop through all countries in the dataset
+    for country in countries_data:
+        for language in country['languages']:
+            if language in language_count:
+                language_count[language] += 1
+            else:
+                language_count[language] = 1
+
+    # Sort by how many countries speak each language (descending)
+    sorted_languages = sorted(language_count.items(), key=lambda x: x[1], reverse=True)
+
+    return sorted_languages[:n]
+result = most_spoken_languages(countries_data, 5)
+print(result)
+
