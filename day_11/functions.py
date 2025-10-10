@@ -75,3 +75,25 @@
 #     fahrenheit = (c * 9/5) + 32
 #     return fahrenheit
 # print(convert_celsius_to_fahrenheit(100))
+
+
+# def check_season(month):
+#     month = month.lower()
+
+#     if month in ("september", "octomber", "November"):
+#         return "Autumn"
+#     elif month in ("december", "january", "february"):
+#         return "Winter"
+#     elif month in ("march", "april", "may"):
+#         return "Spring"
+#     else:
+#         return "Summer"
+    
+# print(check_season("january"))
+
+def calculate_slope(x1, x2, y1, y2):
+    if x1 == x2:
+        print("slope is undifined!")
+    slope = y2 - y1/(x2 - x1)
+    return slope
+print(calculate_slope(5, 3, 6, 4))
