@@ -166,7 +166,7 @@ from countries import countries
 #     reversed_fruits.append(fruits[i])
 # print(reversed_fruits)
 
-import countries_data
+import day_11.countries_data as countries_data
 
 languages = set()  # use a set to avoid duplicates
 
