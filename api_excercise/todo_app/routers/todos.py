@@ -4,12 +4,6 @@ from fastapi import APIRouter
 router = APIRouter()
 todos = []
 
-
-@router.get("/todos")
-async def get_todos():
-    return {"todos": todos}
-
-
 @router.post("/todos")
 async def add_todo(item: str):
     todos.append(item)
