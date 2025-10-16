@@ -15,6 +15,14 @@ async def echo_message(request: Request):
     data = await request.json()
     return {"received": data}
 
-@app.get("user/{username}")
+@app.get("/user/{username}")
 def greet_user(username: str):
     return {"message": f"Hello, {username}!"}
+
+@app.get("/search")
+def search(term: str):
+    return {"search_term: term"}
+
+
+from typing import List
+
