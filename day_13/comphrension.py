@@ -16,5 +16,5 @@ cube = lambda x : x ** 3
 print(cube(3))    # 27
 
 # Multiple variables
-multiple_variable = lambda a, b, c: a ** 2 - 3 * b + 4 * c
+multiple_variable = lambda a, b, c: a ** 2 - 3 * b + 4 *
 print(multiple_variable(5, 5, 3)) # 22
